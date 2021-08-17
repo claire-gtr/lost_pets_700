@@ -1,0 +1,7 @@
+<h1> All the lost pets in Europe </h1>
+
+<% @pets.each do |pet| %>
+  <p> <%= pet.name %> </p>
+  <%= link_to "See more about this pet", pet_path(pet) %>
+  <%= link_to "Delete pet", delete_pet_path(pet), method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>
